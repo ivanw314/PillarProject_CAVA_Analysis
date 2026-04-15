@@ -133,35 +133,27 @@ Data required to generate SGE library cartoons
 
 Targets files contain coordinates for the SGE libraries and are in format of `{GENE}.targets.tsv`
 
-- **targets_tsvs/BARD1.targets.tsv** — 
-
-- **targets_tsvs/RAD51D.targets.tsv** —
+- **targets_tsvs/BARD1.targets.tsv**
+- **targets_tsvs/RAD51D.targets.tsv**
 
 #### orthogonal_sge_data/
 
 Miscellaneous orthogonal SGE data used for QC
 
-- **BARD1_Various.xlsx** —
-
-- **PALB2_Boonen2025.xlsx** —
-
-- **RAD51D_Darrah2026.xlsx** —
+- **BARD1_Various.xlsx**
+- **PALB2_Boonen2025.xlsx**
+- **RAD51D_Darrah2026.xlsx**
 
 #### sge_thermompnn/
 
 Data generated from ThermoMPNN for QC
 
-- **BARD1_ARD.csv** —
-
-- **BARD1_BRCT.csv** —
-
-- **BARD1_RING.csv** —
-
-- **PALB2_WD40.csv** —
-
-- **RAD51D_All.csv** —
-
-- **XRCC2_All.csv** —
+- **BARD1_ARD.csv**
+- **BARD1_BRCT.csv**
+- **BARD1_RING.csv**
+- **PALB2_WD40.csv**
+- **RAD51D_All.csv**
+- **XRCC2_All.csv**
 
 ### vampseq_data_for_qc/
 
