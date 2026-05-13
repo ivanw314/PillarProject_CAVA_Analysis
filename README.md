@@ -11,6 +11,10 @@ PillarProject_CAVA_Analysis/
 │   ├── PP_ResolutionOverview.ipynb
 │   ├── PP_SGE_qc_overview.ipynb
 │   ├── PP_SeqFunctionMap.ipynb
+│   ├── PP_SpliceAI_ClinVar_benchmark.ipynb
+│   ├── PP_SpliceAI_CuratedSplicing_benchmarking.ipynb
+│   ├── PP_SpliceAI_Joint_benchmarking.ipynb
+│   ├── PP_SpliceAI_SGE_Benchmarking.ipynb
 │   ├── PP_StackedHistograms.ipynb
 │   ├── PP_VAMPseq_qc_overview.ipynb
 │   └── deprecated/
@@ -45,6 +49,14 @@ PillarProject_CAVA_Analysis/
     │   │   ├── BARD1_Various.xlsx
     │   │   ├── PALB2_Boonen2025.xlsx
     │   │   └── RAD51D_Darrah2026.xlsx
+    │   ├── spliceai_benchmarking/
+    │   │   ├── 20260506_CuratedSplicingTruthset.xlsx
+    │   │   ├── 20260507_CuratedSplicing_VEPAnnotations_firstpass.txt
+    │   │   ├── 20260511_CuratedSplicing_CleanedVCF.vcf
+    │   │   ├── 20260511_CuratedSplicing_UpdatedVEP.txt
+    │   │   ├── 20260512_ClinVarSplicingSet.xlsx
+    │   │   ├── 20260512_CuratedSplicingSet.xlsx
+    │   │   └── 20260512_SGESplicingSet.xlsx
     │   └── sge_thermompnn/
     │       ├── BARD1_ARD.csv
     │       ├── BARD1_BRCT.csv
@@ -88,6 +100,18 @@ Notebook to generate QC plots for all SGE experiments.
 
 ### PP_SeqFunctionMap.ipynb
 Standalone notebook to build nucleotide-level heatmap
+
+### PP_SpliceAI_ClinVar_benchmark.ipynb
+Benchmarks SpliceAI predictions against ClinVar variants with potential splice effects. Output dataset is used as input to `PP_SpliceAI_Joint_benchmarking.ipynb`.
+
+### PP_SpliceAI_CuratedSplicing_benchmarking.ipynb
+Benchmarks SpliceAI predictions against a curated splicing truth set. Output dataset is used as input to `PP_SpliceAI_Joint_benchmarking.ipynb`.
+
+### PP_SpliceAI_Joint_benchmarking.ipynb
+Joint sensitivity/specificity analysis of SpliceAI across SGE, ClinVar, and curated splicing datasets by variant consequence type. Requires output files from the three individual SpliceAI benchmarking notebooks.
+
+### PP_SpliceAI_SGE_Benchmarking.ipynb
+Benchmarks SpliceAI predictions against SGE splicing functional data. Output dataset is used as input to `PP_SpliceAI_Joint_benchmarking.ipynb`.
 
 ### PP_StackedHistograms.ipynb
 Builds histograms for VAMP-seq data and histograms and insets for SGE data.
@@ -143,6 +167,18 @@ Miscellaneous orthogonal SGE data used for QC
 - **BARD1_Various.xlsx**
 - **PALB2_Boonen2025.xlsx**
 - **RAD51D_Darrah2026.xlsx**
+
+#### spliceai_benchmarking/
+
+Input and processed data for SpliceAI benchmarking analyses.
+
+- **20260506_CuratedSplicingTruthset.xlsx** — Raw curated splicing truth set
+- **20260507_CuratedSplicing_VEPAnnotations_firstpass.txt** — First-pass VEP annotations for curated variants
+- **20260511_CuratedSplicing_CleanedVCF.vcf** — Cleaned VCF used for VEP re-annotation
+- **20260511_CuratedSplicing_UpdatedVEP.txt** — Updated VEP annotations after cleaning
+- **20260512_ClinVarSplicingSet.xlsx** — Processed ClinVar splicing dataset for benchmarking
+- **20260512_CuratedSplicingSet.xlsx** — Processed curated splicing dataset for benchmarking
+- **20260512_SGESplicingSet.xlsx** — Processed SGE splicing dataset for benchmarking
 
 #### sge_thermompnn/
 
