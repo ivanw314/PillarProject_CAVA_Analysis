@@ -1,0 +1,2 @@
+gmm_thresh	mean_abnormal	mean_normal	sd_abnormal	sd_normal	thresh_abnormal	thresh_normal	random_seed
+0.950000	-0.164049	0.005691	0.075475	0.010479	-0.036581	-0.018565	54321
